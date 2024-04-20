@@ -5,13 +5,14 @@ int main() {
     //  random number generator
     std::random_device rd;
     std::mt19937 gen(rd());
+    int beat;
     
     // specifying the range of intergers from 0 to 11
     std::uniform_int_distribution<> dis(0, 11);
     
     // Generate and print a random number
     int daysUntilExpiration  = dis(gen);
-
+    
  if (daysUntilExpiration == 0)
      std :: cout << "Your subscription has expired";
 
