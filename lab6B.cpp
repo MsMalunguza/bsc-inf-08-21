@@ -25,9 +25,9 @@ int main(){
     }
 
 
-    double** beat= new double *[rows];
+    double** number= new double *[rows];
     for (int i = 0; i < rows; i++){
-        beat[i] = new double[columns];
+        number[i] = new double[columns];
     }
 
 
@@ -35,7 +35,7 @@ int main(){
     for(int i =0; i < rows; i++){
         for(int j = 0; j < columns; j++){
             cout << "Enter the value for row "<< i+1 << " column " << j+1<<":";
-            cin >> beat[i][j];
+            cin >> number[i][j];
         }
     }
 
@@ -43,16 +43,16 @@ int main(){
     cout << "The values of the array are shown as follows: \n";
      for(int i =0; i < rows; i++){
         for(int j = 0; j < columns; j++){
-            cout<< beat[i][j] << " ";
+            cout<< number[i][j] << " ";
         }
         cout << endl;
     }
 
     //deleting the dynamically allocated memory
     for(int i = 0; i < rows; i++){
-        delete[] beat[i];
+        delete[] number[i];
     }
-        delete[] beat;
+        delete[]number;
 
 
 
